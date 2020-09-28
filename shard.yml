@@ -1,0 +1,17 @@
+name: ontario_covid
+version: 0.1.0
+
+development_dependencies:
+  minitest:
+    github: ysbaddaden/minitest.cr
+    version: "0.5.1"
+  webmock:
+    github: manastech/webmock.cr
+    branch: master
+
+authors:
+  - Chris Larsen <clarsendev@protonmail.com>
+
+crystal: 0.35.1
+
+license: MIT
