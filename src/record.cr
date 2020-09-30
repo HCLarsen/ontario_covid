@@ -22,5 +22,9 @@ module OntarioCovid
     getter icu : Int32
     @[JSON::Field(key: "Number of patients in ICU on a ventilator with COVID-19")]
     getter ventilator : Int32
+
+    property cases : Int32 = 0
+    property deaths : Int32 = 0
+    property resolves : Int32 = 0
   end
 end
