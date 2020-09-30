@@ -13,9 +13,9 @@ module OntarioCovid
     @[JSON::Field(key: "Total Cases")]
     getter total_cases : Int32
     @[JSON::Field(key: "Resolved")]
-    getter resolved : Int32
+    getter total_resolved : Int32
     @[JSON::Field(key: "Deaths")]
-    getter deaths : Int32
+    getter total_deaths : Int32
     @[JSON::Field(key: "Number of patients hospitalized with COVID-19")]
     getter hospitalized : Int32
     @[JSON::Field(key: "Number of patients in ICU with COVID-19")]

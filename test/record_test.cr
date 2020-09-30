@@ -9,7 +9,7 @@ class RecordTest < Minitest::Test
 
     assert_equal 236, record.id
     assert_equal 50531, record.total_cases
-    assert_equal 43127, record.resolved
-    assert_equal 2840, record.deaths
+    assert_equal 43127, record.total_resolved
+    assert_equal 2840, record.total_deaths
   end
 end
