@@ -4,13 +4,11 @@ require "./record"
 
 module OntarioCovid
   class Status
-    # getter records : Hash(Time, OntarioCovid::Record)
     getter records = {} of Time => OntarioCovid::Record
 
     struct Response
       include JSON::Serializable
 
-      getter help : String
       getter result : Result
     end
 
@@ -26,9 +24,6 @@ module OntarioCovid
         record1.deaths = (record1.total_deaths - record2.total_deaths).abs
         @records[record1.date] = record1
       end
-
-      # records.each do |record|
-      # end
     end
 
     def self.from_json(json : String)
