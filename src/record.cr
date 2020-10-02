@@ -25,6 +25,6 @@ module OntarioCovid
 
     property cases : Int32 = 0
     property deaths : Int32 = 0
-    property resolves : Int32 = 0
+    property resolved : Int32 = 0
   end
 end
