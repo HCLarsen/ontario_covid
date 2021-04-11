@@ -1,6 +1,6 @@
 require "json"
 
-require "./local_converter"
+require "./converters"
 
 module OntarioCovid
   struct Record
@@ -10,17 +10,17 @@ module OntarioCovid
     getter id : Int32
     @[JSON::Field(key: "Reported Date", converter: Time::LocalConverter)]
     getter date : Time
-    @[JSON::Field(key: "Total Cases")]
+    @[JSON::Field(key: "Total Cases", converter: Int32::NumberConverter)]
     getter total_cases : Int32
-    @[JSON::Field(key: "Resolved")]
+    @[JSON::Field(key: "Resolved", converter: Int32::NumberConverter)]
     getter total_resolved : Int32
-    @[JSON::Field(key: "Deaths")]
+    @[JSON::Field(key: "Deaths", converter: Int32::NumberConverter)]
     getter total_deaths : Int32
-    @[JSON::Field(key: "Number of patients hospitalized with COVID-19")]
+    @[JSON::Field(key: "Number of patients hospitalized with COVID-19", converter: Int32::NumberConverter)]
     getter hospitalized : Int32
-    @[JSON::Field(key: "Number of patients in ICU with COVID-19")]
+    @[JSON::Field(key: "Number of patients in ICU due to COVID-19", converter: Int32::NumberConverter)]
     getter icu : Int32
-    @[JSON::Field(key: "Number of patients in ICU on a ventilator with COVID-19")]
+    @[JSON::Field(key: "Number of patients in ICU on a ventilator due to COVID-19", converter: Int32::NumberConverter)]
     getter ventilator : Int32
 
     property cases : Int32 = 0

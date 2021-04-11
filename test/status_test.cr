@@ -7,14 +7,14 @@ class StatusTest < Minitest::Test
     json = File.read("test/files/response.json")
     status = OntarioCovid::Status.from_json(json)
 
-    assert_equal Time.local(2020, 9, 29), status.latest_date
-    assert_equal [554, 700, 491, 435, 409, 409, 335], status.cases
-    assert_equal [4, 1, 2, 0, 1, 1, 3], status.deaths
-    assert_equal 476, status.seven_day_average
+    assert_equal Time.local(2021, 4, 10), status.latest_date
+    assert_equal [3813, 4227, 3295, 3215, 3065, 2938, 3041], status.cases
+    assert_equal [19, 18, 19, 17, 8, 10, 12], status.deaths
+    assert_equal 3370, status.seven_day_average
 
     latest = status.latest
-    assert_equal 51085, latest.total_cases
-    assert_equal 554, latest.cases
-    assert_equal 4, latest.deaths
+    assert_equal 382152, latest.total_cases
+    assert_equal 3813, latest.cases
+    assert_equal 19, latest.deaths
   end
 end

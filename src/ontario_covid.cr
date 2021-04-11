@@ -1,3 +1,5 @@
+require "http"
+
 require "./status"
 
 # TODO: Write documentation for `OntarioCovid`

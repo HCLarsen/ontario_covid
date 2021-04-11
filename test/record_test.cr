@@ -7,9 +7,9 @@ class RecordTest < Minitest::Test
     json = File.read("test/files/record.json")
     record = OntarioCovid::Record.from_json(json)
 
-    assert_equal 236, record.id
-    assert_equal 50531, record.total_cases
-    assert_equal 43127, record.total_resolved
-    assert_equal 2840, record.total_deaths
+    assert_equal 430, record.id
+    assert_equal 382152, record.total_cases
+    assert_equal 343622, record.total_resolved
+    assert_equal 7531, record.total_deaths
   end
 end
